@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    zoom: 90%; 
+    font-size: 1rem;
+    overflow-x: hidden;
+    align-items: center;
+    background: #cecece;
+    padding: 2em;
+    background: rgb(41, 19, 1);
+    background: linear-gradient(90deg, rgb(44, 30, 1) 0%, rgb(117, 68, 4) 35%, rgb(244, 167, 95) 100%);
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 1024px) {
+    .bgvideo {
+        max-height: 700px;
+        background-size: contain;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 30px;
+}
+
+.navigation h1 {
+    color: white;
+    font-size: 5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navigation span {
+    color: crimson;
+}
+
+.bar li {
+    list-style: none;
+    display: inline-block;
+}
+
+.bar li a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-left: 25px;
+}
+
+.bar li a:hover {
+    color: crimson;
+    padding: 5px 10px;
+    transition: 0.5s ease;
+}
+
+.articles {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-gap: 15em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    margin: 20px auto;
+    max-width: 1700px;
+}
+
+.article {
+    position: relative;
+    height: 250px;
+    background: #fff;
+    box-shadow:
+      0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+      0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+      0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article img:hover {
+    opacity: 0.5;
+    transition: 0.5s ease;
+}
+
+.article p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.view-cart-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.view-cart-button {
+    background-color: crimson;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.view-cart-button:hover {
+    background-color: darkred;
+    transition: 0.3s ease;
+}

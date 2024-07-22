@@ -1,0 +1,195 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: 0;
+}
+body::-webkit-scrollbar{
+    display:none; /*hides the scrollbar*/
+}
+body{
+    zoom:90%; /*everything inside budy tag seems 10% smaller*/
+    font-size: 1rem;
+    overflow-x: hidden; /*prevents horizontal scroll*/
+    background-image: url("https://img.freepik.com/free-photo/coffee-ai-generated_23-2150691651.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+main{
+    height:100vh;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width:1024px){
+    .bgvideo{
+        max-height:700px;
+        background-size: contain;
+    position:fixed;
+    right:0;
+    bottom:0;
+    min-width:100%;
+    min-height:100%;
+    z-index:-1;
+    }
+}
+
+.navigation{
+    display:flex;
+    flex:wrap;
+    align-items:center;
+    justify-content: space-between;
+    padding:30px 30px;
+}
+
+
+.navigation h1{
+    color:white;
+    font-size:5rem;
+    font-weight: 600;
+    cursor:pointer;
+}
+
+.navigation span{
+    color:crimson;
+}
+
+.bar li{
+    list-style: none;
+    display: inline-block;
+}
+
+.bar li a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-left: 25px;
+}
+
+.bar li a:hover{
+    color: crimson;
+    padding: 5px 10px;
+    transition: 0.5s ease;
+}
+
+
+.visible{
+    height:400px;
+    padding: 70px;
+}
+.visible h1{
+    font-size: 2.75em;;
+    color:white;
+    font-weight: 600px;
+}
+.visible p{
+    color: burlywood;
+    font-size: 1.875rem;
+    padding-top:10px;;
+}
+.visible span{
+    color:crimson;
+}
+.visible button{
+    height:40px;
+    color:white;
+    background: none;
+    font-size:1.375rem;
+    margin-top:20px;
+    padding: 5px 30px;
+    border: 2px solid crimson;
+    cursor: pointer;
+    transition: 0.4 ease;
+}
+.visible button:hover{
+        background: crimson;
+        border: 2px solid crimson;
+}
+
+@media (max-width: 1024px) {
+    .navigation h1 {
+        font-size: 2rem;
+    }
+
+    .bar li a {
+        font-size: 1rem;
+    }
+
+    .visible h1 {
+        font-size: 2rem;
+    }
+
+    .visible p {
+        font-size: 1.5rem;
+    }
+
+    .visible button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation h1 {
+        margin-bottom: 20px;
+    }
+
+    .bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bar li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .navigation h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bar li {
+        margin: 10px 0;
+    }
+
+    .bar li a {
+        font-size: 1rem;
+    }
+
+    .visible {
+        padding: 50px 20px;
+    }
+
+    .visible h1 {
+        font-size: 1.5rem;
+    }
+
+    .visible p {
+        font-size: 1.25rem;
+    }
+
+    .visible button {
+        font-size: 0.875rem;
+        padding: 5px 20px;
+    }
+}

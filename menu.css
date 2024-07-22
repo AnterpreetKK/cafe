@@ -123,7 +123,25 @@ main {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
-
+.order-button {
+    background-color: crimson;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px; 
+  }
+  
+  .order-button:hover {
+    background-color: darkred;
+    transition: 0.3s ease;
+  }
+  
 .view-cart-bar {
     position: fixed;
     bottom: 0;
